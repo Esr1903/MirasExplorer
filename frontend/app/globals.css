@@ -5848,6 +5848,19 @@ canvas {
   }
 }
 
+/* Public archive route system */
+.archive-route__hero { padding: 88px 0 62px; background: linear-gradient(120deg, #10243c, #1d3854 62%, #8a672d); color: #fffaf2; }
+.archive-route__hero h1 { max-width: 760px; margin: 8px 0 16px; font-family: Georgia, serif; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; }
+.archive-route__hero p:not(.miras-eyebrow) { max-width: 690px; color: rgba(255,250,242,.82); font-size: 1.06rem; line-height: 1.65; }
+.category-route-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; }
+.category-route-card { min-height: 190px; padding: 22px; border: 1px solid rgba(16,36,60,.12); border-radius: 16px; background: #fffaf2; color: var(--navy); text-decoration: none; box-shadow: 0 8px 28px rgba(16,36,60,.06); transition: transform .18s ease, box-shadow .18s ease; }
+.category-route-card:hover { transform: translateY(-4px); box-shadow: 0 16px 35px rgba(16,36,60,.13); }
+.category-route-card span,.category-route-card small { color: #956e32; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.category-route-card h2 { margin: 12px 0 9px; font-size: 1.05rem; }.category-route-card p { color: rgba(16,36,60,.68); font-size: .88rem; line-height: 1.5; }.category-route-card small { display:block;margin-top:14px; }
+.subfield-route { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:28px; }.subfield-route section { padding:26px; border-radius:18px; background:#f6ecdc; }.subfield-route p { line-height:1.65; color:rgba(16,36,60,.72); }.archive-route__identifier { color:rgba(16,36,60,.65); }
+.workshop-scene { position:relative; min-height:420px; overflow:hidden; border-radius:24px; background:linear-gradient(150deg,#172d3f,#60472b 58%,#b78e4b); box-shadow:inset 0 0 100px rgba(0,0,0,.36); }.workshop-scene--paper { background:linear-gradient(150deg,#172d3f,#66513a 58%,#d3af61); }.workshop-scene--calligraphy { background:linear-gradient(150deg,#0e1c29,#51381f 62%,#9e7633); }.workshop-scene--jewelry { background:linear-gradient(150deg,#101c29,#4e3922 60%,#cfaf57); }.workshop-scene__arch { position:absolute; left:14%; right:14%; top:12%; height:75%; border:28px solid rgba(255,244,216,.19); border-bottom:0; border-radius:220px 220px 0 0; }.workshop-scene__table { position:absolute; left:9%;right:9%;bottom:13%;height:21%;background:linear-gradient(#805a31,#382517); transform:perspective(400px) rotateX(25deg); }.workshop-scene__hotspots a { position:absolute; display:grid; width:32px;height:32px;place-items:center;border:2px solid #fff3d4;border-radius:50%;background:#b78940;color:#11263b;font-weight:800;text-decoration:none;box-shadow:0 0 0 7px rgba(183,137,64,.22); }.login-page { min-height:calc(100vh - 80px); display:grid; place-items:center; padding:60px 20px; background:linear-gradient(135deg,#f7efe1,#e2d1b1); }.login-page section { width:min(100%,470px); padding:38px; border-radius:22px; background:#fffaf2; box-shadow:0 20px 55px rgba(16,36,60,.14); }.login-page h1 { margin:8px 0; font-family:Georgia,serif; color:var(--navy); }.login-page form { display:grid; gap:16px; margin-top:25px; }.login-page label { display:grid; gap:7px; color:var(--navy); font-size:.86rem; font-weight:700; }.login-page input { padding:12px;border:1px solid rgba(16,36,60,.22);border-radius:8px;font:inherit; }.login-page__reset { border:0;background:transparent;color:#8d672e;text-align:left;cursor:pointer; }
+@media (max-width:700px) { .archive-route__hero { padding:60px 0 40px; }.subfield-route { grid-template-columns:1fr; }.workshop-scene{min-height:320px;} }
+
 /* =========================================================
    EDITOR IMPORT — VALIDATION RESULTS
    ========================================================= */

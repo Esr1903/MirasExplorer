@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+import { MOVABLE_HERITAGE_CATEGORIES } from "@/lib/constants/heritageCategories";
+export default function CategoriesPage() { return <ArchiveRoute eyebrow="Koleksiyon haritası" title="Kültürel miras alanları" intro="Tüm taşınabilir kültürel miras alt alanlarını üretim gelenekleri üzerinden keşfedin."><div className="category-route-grid">{MOVABLE_HERITAGE_CATEGORIES.flatMap(category=>category.subfields.map(field=><Link key={field.code} href={`/alt-alan/${field.code}`} className="category-route-card"><span>{category.indexLabel}</span><h2>{field.shortTitle ?? field.title}</h2><p>{field.description}</p><small>{field.scene.replaceAll("_"," ")} · Atölyeyi keşfet</small></Link>))}</div></ArchiveRoute>; }

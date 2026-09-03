@@ -39,3 +39,9 @@ Production URL: yok. Backend URL: yok. Production database provider: yapılandı
 Recovery branch: `recovery/mirasexplorer-production-fix`. Production Vercel root (`https://miras-explorer.vercel.app/`) HTTP 200 döndürüyor ancak editör içeriğini gösteriyor; bu kaynakta root route yeniden public homepage olarak düzeltildi. Render health, assets ve facets endpointleri HTTP 200 döndürüyor; assets yanıtı `total=0` olduğu için production Supabase verisi doğrulanmış olarak aktarılmış değildir.
 
 Frontend import ekranı artık ayrı `NEXT_PUBLIC_IMPORT_API_URL` kullanmaz; import adresi `NEXT_PUBLIC_API_BASE_URL` değerinden türetilir. Local testler: TypeScript, production build ve pytest PASS.
+
+## Phase 1 public-route recovery — 2026-09-04
+
+Primary public navigation artık `/kesfet`, `/kategoriler`, `/atolye-turlari`, `/ara` ve `/giris` rotalarına gider. Canonical alt alanlar `/alt-alan/[code]`, kategori grupları `/alan/[code]`, atölyeler `/tur/[code]` altında data-driven sayfalarla erişilebilir; eski `/tur` güvenli biçimde yeni atölye indeksine yönlenir. Editor rotaları middleware ile Supabase kullanıcı doğrulamasına bağlanır ve yapılandırma eksikse guest kullanıcıyı `/giris?next=...` adresine yönlendirir.
+
+Production Render API'si HTTP 200 ile `total=0` döndürmeye devam etmektedir. Supabase salt-okunur bağlantı bilgisi mevcut olmadığı için bunun boş katalog mu yoksa yayın filtresi mi olduğu doğrudan doğrulanamamıştır; production'a hiçbir veri yazılmamıştır.

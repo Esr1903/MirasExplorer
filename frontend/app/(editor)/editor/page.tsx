@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+export default function EditorPage(){return <ArchiveRoute eyebrow="Editör çalışma alanı" title="Koleksiyon yönetimi" intro="Aktarım öncesi doğrulama ve duplicate koruması bu çalışma alanında korunur."><div className="category-route-grid">{[["Yeni Aktarım","/editor/import","JSON, ZIP veya klasör paketi"],["Aktarımlar","/editor/import","Staging ve işlem durumu"],["Medya","/editor/import","Eşleştirilen medya kayıtları"],["Başvurular","/editor/import","Editoryal inceleme alanı"]].map(([title,href,description])=><Link key={title} href={href} className="category-route-card"><h2>{title}</h2><p>{description}</p></Link>)}</div></ArchiveRoute>}

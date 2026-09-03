@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+import { MOVABLE_HERITAGE_SUBFIELDS } from "@/lib/constants/heritageCategories";
+import { WORKSHOP_EXPERIENCES } from "@/lib/constants/workshopExperiences";
+export default async function SubfieldPage({ params }: { params: Promise<{code:string}> }) { const {code}=await params; const field=MOVABLE_HERITAGE_SUBFIELDS.find(x=>x.code===code); if(!field) notFound(); const workshop=WORKSHOP_EXPERIENCES.find(x=>x.relatedSubfields.includes(code)); return <ArchiveRoute eyebrow="Yaşayan gelenek" title={field.title} intro={field.description}><div className="subfield-route"><section><h2>Arşiv bağlantıları</h2><p>Bu alt alandaki eserler, ustalar, malzemeler, teknikler ve yerler yayınlanan katalog verisiyle birlikte görünür.</p><Link href={`/ara?subfield=${encodeURIComponent(code)}`} className="home-primary-action">Eserleri ara</Link></section><section><h2>Üretim atmosferi</h2><p>{workshop?.atmosphere ?? "Üretim geleneğini malzeme, teknik ve ustalık ilişkileri içinde inceleyin."}</p>{workshop?<Link href={`/tur/${workshop.code}`} className="home-secondary-action">Atölyeyi keşfet</Link>:null}</section></div></ArchiveRoute>; }
