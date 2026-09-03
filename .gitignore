@@ -1,0 +1,45 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Local data and runtime artifacts
+data/imports/*
+!data/imports/.gitkeep
+data/exports/*
+!data/exports/.gitkeep
+backend/storage/imports/*
+!backend/storage/imports/.gitkeep
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Local test/release artifacts
+.test-tmp/
+MirasExplorer_Source_Release.zip

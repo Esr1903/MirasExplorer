@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#132236"/>
+
+  <circle
+    cx="600"
+    cy="450"
+    r="250"
+    fill="#273b55"
+  />
+
+  <g fill="#d4aa58">
+    <circle
+      cx="600"
+      cy="450"
+      r="65"
+    />
+
+    <polygon
+      points="
+        600,210
+        645,385
+        820,450
+        645,515
+        600,690
+        555,515
+        380,450
+        555,385
+      "
+    />
+  </g>
+
+  <circle
+    cx="600"
+    cy="450"
+    r="22"
+    fill="#fff0c2"
+  />
+</svg>

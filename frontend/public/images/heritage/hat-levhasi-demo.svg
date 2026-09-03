@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0%" stop-color="#d6b774"/>
+      <stop offset="100%" stop-color="#745a34"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="#1d2a38"/>
+
+  <rect
+    x="110"
+    y="90"
+    width="980"
+    height="720"
+    rx="30"
+    fill="url(#bg)"
+  />
+
+  <rect
+    x="145"
+    y="125"
+    width="910"
+    height="650"
+    rx="20"
+    fill="none"
+    stroke="#d7c29c"
+    stroke-width="6"
+  />
+
+  <text
+    x="600"
+    y="525"
+    text-anchor="middle"
+    font-size="290"
+    font-family="Georgia, serif"
+    fill="#1c2938"
+  >
+    هـ
+  </text>
+</svg>
