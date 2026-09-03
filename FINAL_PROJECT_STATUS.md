@@ -46,6 +46,10 @@ Primary public navigation artık `/kesfet`, `/kategoriler`, `/atolye-turlari`, `
 
 Production Render API'si HTTP 200 ile `total=0` döndürmeye devam etmektedir. Supabase salt-okunur bağlantı bilgisi mevcut olmadığı için bunun boş katalog mu yoksa yayın filtresi mi olduğu doğrudan doğrulanamamıştır; production'a hiçbir veri yazılmamıştır.
 
+## Sites-driven final rebuild — 2026-09-04
+
+Sites tasarım incelemesiyle seçilen yön, hızlı arşiv erişimini tarihî avlu atmosferiyle birleştiren **Dijital Müze + Tarihî Avlular** yaklaşımıdır. Final dalda homepage için proje sahipliğinde dekoratif avlu görseli eklendi; bu görsel akademik katalog verisi değildir. Public data boşsa site hiçbir eser, kişi veya yer bilgisi uydurmaz.
+
 ## Living Heritage public experience — 2026-09-04
 
 Public deneyim `Miras Yolculuğu` merkezli genişletildi: `/kesfet` artık aramaya yönlenmek yerine keşif yolları sunar; `/miras-yolculugu` tarihî avlu ile atölye portallarını, `/tur/[code]` ise alt alan odaklı erişilebilir 2.5D sahne ve koleksiyon çekmecesini kullanır. Sahneler dekoratif çevre kullanır; gerçek eser adı veya metadata üretmez ve arşiv sorgusu sayfalı public API'ye yönlenir. `/harita`, mevcut public API coğrafi kayıt yayınlamadığı için açık bir hazır-altyapı durumu gösterir.

@@ -1,9 +1,5 @@
-# Mimari
+# Architecture
 
-Frontend Next.js ile `frontend/` altında çalışır. Editör, JSON ile isteğe bağlı ZIP veya klasör medya dosyalarını FastAPI'ye gönderir.
+Next.js App Router supplies the public experience and editor routes. FastAPI owns catalogue search, import staging, duplicate protection and PostgreSQL access. Public pages use `NEXT_PUBLIC_API_BASE_URL`; the browser never receives database credentials.
 
-Backend `backend/` altında FastAPI kullanır. Aktarımlar önce dosya sistemi staging alanına alınır, doğrulanır ve PostgreSQL/PostGIS `km` şemasına tek işlem olarak yazılır. Mevcut veya doğrulanamayan kayıtlar commit öncesinde engellenir; otomatik overwrite yapılmaz.
-
-Public katalog API'si yalnız public erişimli ve reddedilmemiş kayıtları sayfalı olarak sunar. Arama; ad, alternatif ad, kimlik, ilişkili kayıt, malzeme ve teknik tablolarını kullanır. Facet'ler sınıflandırma, malzeme, teknik ve yer ilişkilerinden üretilir.
-
-Yetkili şema kaynağı `database/schema/ana_ortak_kulturel_miras_veritabani.sql` dosyasıdır.
+The living-heritage experience is isolated in `frontend/components/experience`. It provides the courtyard, workshop scenes, labelled object hotspots and collection drawer without loading catalogue records into the initial page.
