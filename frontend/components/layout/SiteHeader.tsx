@@ -55,7 +55,7 @@ export function SiteHeader() {
                     </Link>
 
                     <Link
-                        href="/editor"
+                        href="/editor/import"
                         className="site-editor-link"
                     >
                         Editör Girişi
