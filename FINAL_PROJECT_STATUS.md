@@ -45,3 +45,7 @@ Frontend import ekranı artık ayrı `NEXT_PUBLIC_IMPORT_API_URL` kullanmaz; imp
 Primary public navigation artık `/kesfet`, `/kategoriler`, `/atolye-turlari`, `/ara` ve `/giris` rotalarına gider. Canonical alt alanlar `/alt-alan/[code]`, kategori grupları `/alan/[code]`, atölyeler `/tur/[code]` altında data-driven sayfalarla erişilebilir; eski `/tur` güvenli biçimde yeni atölye indeksine yönlenir. Editor rotaları middleware ile Supabase kullanıcı doğrulamasına bağlanır ve yapılandırma eksikse guest kullanıcıyı `/giris?next=...` adresine yönlendirir.
 
 Production Render API'si HTTP 200 ile `total=0` döndürmeye devam etmektedir. Supabase salt-okunur bağlantı bilgisi mevcut olmadığı için bunun boş katalog mu yoksa yayın filtresi mi olduğu doğrudan doğrulanamamıştır; production'a hiçbir veri yazılmamıştır.
+
+## Living Heritage public experience — 2026-09-04
+
+Public deneyim `Miras Yolculuğu` merkezli genişletildi: `/kesfet` artık aramaya yönlenmek yerine keşif yolları sunar; `/miras-yolculugu` tarihî avlu ile atölye portallarını, `/tur/[code]` ise alt alan odaklı erişilebilir 2.5D sahne ve koleksiyon çekmecesini kullanır. Sahneler dekoratif çevre kullanır; gerçek eser adı veya metadata üretmez ve arşiv sorgusu sayfalı public API'ye yönlenir. `/harita`, mevcut public API coğrafi kayıt yayınlamadığı için açık bir hazır-altyapı durumu gösterir.

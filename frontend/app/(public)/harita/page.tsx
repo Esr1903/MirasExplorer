@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+export default function MapPage(){return <ArchiveRoute eyebrow="Mekânsal keşif" title="Miras Haritası" intro="Yer kayıtları ve geometri verileri yayınlandığında eserleri bölge ve kent ölçeğinde burada keşfedebilirsiniz."><section className="map-placeholder"><div className="map-placeholder__lines"/><div><h2>Harita altyapısı hazır</h2><p>Mevcut public katalog endpointi koordinat yayınlamıyor. Konum uydurmadan, gerçek coğrafi kayıtlar erişilebilir olduğunda kümeleme ve filtrelerle çalışacak harita deneyimini hazırlıyoruz.</p><Link href="/ara" className="home-primary-action">Yer adına göre ara</Link></div></section></ArchiveRoute>}

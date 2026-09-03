@@ -27,7 +27,8 @@ export function SiteHeader() {
                     <Link href="/kategoriler">
                         Kategoriler
                     </Link>
-                    <Link href="/atolye-turlari">Atölye Turları</Link>
+                    <Link href="/miras-yolculugu">Miras Yolculuğu</Link>
+                    <Link href="/harita">Harita</Link>
                 </nav>
 
                 <div className="site-header__actions">
