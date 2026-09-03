@@ -1,0 +1,2 @@
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+export default async function PersonPage({params}:{params:Promise<{id:string}>}){const {id}=await params;return <ArchiveRoute eyebrow="Kişi kaydı" title="Kişi ilişkileri" intro="Kişi ayrıntıları, yayınlanan kişi endpointi etkin olduğunda ilişkili eserler ve yerlerle burada görüntülenecek."><p className="archive-route__identifier">Kayıt kimliği: {id}</p></ArchiveRoute>}

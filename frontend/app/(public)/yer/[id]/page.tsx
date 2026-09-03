@@ -1,0 +1,2 @@
+import { ArchiveRoute } from "@/components/public/ArchiveRoute";
+export default async function PlacePage({params}:{params:Promise<{id:string}>}){const {id}=await params;return <ArchiveRoute eyebrow="Yer kaydı" title="Yer ilişkileri" intro="Yer ayrıntıları, yayınlanan yer endpointi etkin olduğunda ilişkili eserler ve kişilerle burada görüntülenecek."><p className="archive-route__identifier">Kayıt kimliği: {id}</p></ArchiveRoute>}

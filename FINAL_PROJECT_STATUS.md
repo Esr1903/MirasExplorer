@@ -33,3 +33,19 @@ Production deployment durumu: `BLOCKED_BY_CREDENTIALS`. Yapılandırılmış vey
 Production URL: yok. Backend URL: yok. Production database provider: yapılandırılmadı. Production media: yapılandırılmadı; mevcut medya yalnız local staging filesystem üzerindedir.
 
 `.env.example`, `NEXT_PUBLIC_API_BASE_URL`, `DATABASE_URL` ve `CORS_ORIGINS` için güvenli production referanslarını içerir. CORS, production frontend URL'si sağlandığında wildcard kullanmadan bu domain'e sınırlandırılabilir.
+
+## Recovery audit — 2026-09-04
+
+Recovery branch: `recovery/mirasexplorer-production-fix`. Production Vercel root (`https://miras-explorer.vercel.app/`) HTTP 200 döndürüyor ancak editör içeriğini gösteriyor; bu kaynakta root route yeniden public homepage olarak düzeltildi. Render health, assets ve facets endpointleri HTTP 200 döndürüyor; assets yanıtı `total=0` olduğu için production Supabase verisi doğrulanmış olarak aktarılmış değildir.
+
+Frontend import ekranı artık ayrı `NEXT_PUBLIC_IMPORT_API_URL` kullanmaz; import adresi `NEXT_PUBLIC_API_BASE_URL` değerinden türetilir. Local testler: TypeScript, production build ve pytest PASS.
+
+## Phase 1 public-route recovery — 2026-09-04
+
+Primary public navigation artık `/kesfet`, `/kategoriler`, `/atolye-turlari`, `/ara` ve `/giris` rotalarına gider. Canonical alt alanlar `/alt-alan/[code]`, kategori grupları `/alan/[code]`, atölyeler `/tur/[code]` altında data-driven sayfalarla erişilebilir; eski `/tur` güvenli biçimde yeni atölye indeksine yönlenir. Editor rotaları middleware ile Supabase kullanıcı doğrulamasına bağlanır ve yapılandırma eksikse guest kullanıcıyı `/giris?next=...` adresine yönlendirir.
+
+Production Render API'si HTTP 200 ile `total=0` döndürmeye devam etmektedir. Supabase salt-okunur bağlantı bilgisi mevcut olmadığı için bunun boş katalog mu yoksa yayın filtresi mi olduğu doğrudan doğrulanamamıştır; production'a hiçbir veri yazılmamıştır.
+
+## Living Heritage public experience — 2026-09-04
+
+Public deneyim `Miras Yolculuğu` merkezli genişletildi: `/kesfet` artık aramaya yönlenmek yerine keşif yolları sunar; `/miras-yolculugu` tarihî avlu ile atölye portallarını, `/tur/[code]` ise alt alan odaklı erişilebilir 2.5D sahne ve koleksiyon çekmecesini kullanır. Sahneler dekoratif çevre kullanır; gerçek eser adı veya metadata üretmez ve arşiv sorgusu sayfalı public API'ye yönlenir. `/harita`, mevcut public API coğrafi kayıt yayınlamadığı için açık bir hazır-altyapı durumu gösterir.

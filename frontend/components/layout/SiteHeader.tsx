@@ -23,11 +23,12 @@ export function SiteHeader() {
                     className="site-navigation"
                     aria-label="Ana navigasyon"
                 >
-                    <Link href="/ara">Keşfet</Link>
-                    <Link href="/alan/tasinabilir-kultur-mirasi">
+                    <Link href="/kesfet">Keşfet</Link>
+                    <Link href="/kategoriler">
                         Kategoriler
                     </Link>
-                    <Link href="/tur">Atölye Turları</Link>
+                    <Link href="/miras-yolculugu">Miras Yolculuğu</Link>
+                    <Link href="/harita">Harita</Link>
                 </nav>
 
                 <div className="site-header__actions">
@@ -55,7 +56,7 @@ export function SiteHeader() {
                     </Link>
 
                     <Link
-                        href="/editor"
+                        href="/giris"
                         className="site-editor-link"
                     >
                         Editör Girişi
